@@ -1,0 +1,58 @@
+/* HEADER CSS */
+
+header {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+header span {
+    background-color: #20527a;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+nav {
+    font-family: "Sansita", sans-serif;
+}
+
+nav ul {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 0;
+    list-style-type: none;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 17px;
+}
+
+nav a:hover {
+    background-color: #20527a;
+    transition: background-color 0.3s ease 0s;
+    border-radius: 2px;
+}
+
+/** **/
+
+@media screen and (max-width: 718.19px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-left: 0;
+    }
+}
+
+/* END HEADER CSS */
