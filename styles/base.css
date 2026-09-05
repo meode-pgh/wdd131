@@ -8,19 +8,15 @@ header {
 }
 
 header span {
-    background-color: #20527a;
+    background-color: #092328;
     padding: 1rem;
     text-align: center;
     font-size: 2rem;
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
-nav {
-    font-family: "Sansita", sans-serif;
-}
-
 nav ul {
-    background-color: #333;
+    background-color: #12544F;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -44,7 +40,7 @@ nav a:hover {
     border-radius: 2px;
 }
 
-/** **/
+/** RESPONSIVE DESIGN **/
 
 @media screen and (max-width: 718.19px) {
     nav ul {
@@ -56,3 +52,84 @@ nav a:hover {
 }
 
 /* END HEADER CSS */
+
+/* MAIN CSS */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "name name"
+        "card1 card2";
+    gap: 5px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.name {
+    text-align: center;
+    margin-top: 10px;
+    grid-area: name;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.card1 {
+    display: grid;
+    grid-area: card1;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 3rem;
+    grid-template-areas: 
+    "about-me about-me";
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.card1-title {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    padding-top: ;
+    color: #fff;
+    background-color: #2A835F;
+    margin: 0;
+    
+    grid-area: about-me;
+}
+
+.pf-img {
+    width: 200px;
+    height: 200px;
+    padding: 1rem;
+}
+
+.card2 {
+    grid-area: card2;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.card2-title {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    color: #fff;
+    background-color: #2A835F;
+    padding: 1rem;
+    margin: 0;
+}
+
+.ph-flag-img {
+    width: 350px;
+    height: 200px;
+    padding: 1rem;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+}
+
+
