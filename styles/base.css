@@ -57,79 +57,109 @@ nav a:hover {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "name name"
-        "card1 card2";
-    gap: 5px;
-    max-width: 90%;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    gap: 1.75rem;
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    padding: 0 1.25rem;
 }
 
 .name {
     text-align: center;
-    margin-top: 10px;
-    grid-area: name;
+    margin-bottom: 0.5rem;
+    grid-column: 1 / -1;
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.card1 {
-    display: grid;
-    grid-area: card1;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 3rem;
-    grid-template-areas: 
-    "about-me about-me";
-
+/* .card {
+    border: 1px solid #e2e0d8;
+    border-radius: 10px;
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
+    display: grid;
+    grid-template-areas:
+        "a a a"
+        "b b c"
+        "b b c";
+} */
+
+.card {
+    border: 1px solid #e2e0d8;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1 auto;
+    grid-template-areas:
+        "a a a"
+        "b b c";
 }
 
-.card1-title {
+.abt {
     font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
-    padding-top: ;
     color: #fff;
     background-color: #2A835F;
+    padding: 15px 0 15px 0;
     margin: 0;
-    
-    grid-area: about-me;
+    border-radius: 10px 10px 0 0;
+    grid-area: a;
 }
 
-.pf-img {
+.wbr {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+    color: #fff;
+    background-color: #2A835F;
+    padding: 15px 0 15px 0;
+    height: 24.45px;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    grid-area: a;
+}
+
+/* .pf-img {
+    grid-area: c;
     width: 200px;
     height: 200px;
-    padding: 1rem;
-}
-
-.card2 {
-    grid-area: card2;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
-}
-
-.card2-title {
-    font-family: "Lucida Console", "Courier New", monospace;
-    text-align: center;
-    color: #fff;
-    background-color: #2A835F;
-    padding: 1rem;
-    margin: 0;
+    padding-top: 13px ;
 }
 
 .ph-flag-img {
-    width: 350px;
+    grid-area: c;
+    width: 200px;
+    height: 100px;
+} */
+
+.pf-img {
+    grid-area: c;
+    width: 200px;
     height: 200px;
-    padding: 1rem;
+    padding-top: 13px;
+    padding-right: 10px;
 }
+
+.ph-flag-img {
+    grid-area: c;
+    width: 200px;
+    height: 100px;
+    padding-top: 13px;
+    padding-right: 10px;
+}
+
+p {
+    grid-area: b;
+    padding: 1rem 2rem 1rem 1rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.ph-flag {
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
 
 /* FOOTER */
 
 footer {
     text-align: center;
 }
-
-
